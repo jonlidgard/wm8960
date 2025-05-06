@@ -1,0 +1,49 @@
+menu "WM8960 Configuration"
+    config WM8960_I2S_BCLK_PIN
+        int "WM8960 I2S BCLK GPIO"
+        default 25
+        help
+            GPIO number to use for WM8960 I2S BCLK.
+
+    config WM8960_I2S_DACLRC_PIN
+        int "WM8960 I2S DACLRC GPIO"
+        default 27
+        help
+            GPIO number to use for WM8960 I2S DACLRC.
+
+    config WM8960_I2S_DACDAT_PIN
+        int "WM8960 I2S DACDAT GPIO"
+        default 26
+        help
+            GPIO number to use for WM8960 I2S DACDAT.
+
+    config WM8960_I2C_SCL_PIN
+            int "WM8960 I2C SCL GPIO"
+            default 22
+            help
+                GPIO number to use for WM8960 I2C SCL.
+
+    config WM8960_I2C_SDA_PIN
+            int "WM8960 I2C SDA GPIO"
+            default 21
+            help
+                GPIO number to use for WM8960 I2C SDA.
+
+    choice WM89690_I2C_MASTER_PORT_NUM
+        prompt "Choose the I2C Master Port Number:"
+        default WM89690_I2C_MASTER_PORT_NUM_0
+
+        config WM89690_I2C_MASTER_PORT_NUM_0
+                bool "I2C_NUM_0"
+
+        config WM89690_I2C_MASTER_PORT_NUM_1
+                bool "I2C_NUM_1"
+
+    endchoice
+
+    config WM8960_I2C_MASTER_FREQUENCY
+            int "Master Frequency"
+            default 400000
+            help
+                I2C Speed of Master device.
+endmenu
