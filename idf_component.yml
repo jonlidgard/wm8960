@@ -1,4 +1,4 @@
-version: "0.0.1"
+version: "0.0.3"
 description: "ESP-IDF WM8960 Codec libray, based off the SparkFun version for Arduino."
 license: "MIT"
 url: "https://github.com/jonlidgard/wm8960"
